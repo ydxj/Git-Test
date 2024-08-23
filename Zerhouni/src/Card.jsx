@@ -29,12 +29,25 @@ function Card(prop){
         fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
         color: "rgb(6, 33, 243)",
     }
+
+    /*adding new code here*/
+    const cardlist = prop.items;
+
+    /*adding new code here*/
     return(
-        <div style={CardStyle}>
-            <img src={ProfilPic} alt="Profile" style={ImageStyle}/>
-            <h2 style={TitleStyle}>{prop.name}</h2>
-            <p style={Paragraph}>{prop.bio}</p>
-        </div>
+        <>
+            {/* <div style={CardStyle}>
+                <img src={ProfilPic} alt="Profile" style={ImageStyle}/>
+                <h2 style={TitleStyle}>{prop.name}</h2>
+                <p style={Paragraph}>{prop.bio}</p>
+            </div> */}
+            {cardlist.map(list =>
+            <div style={CardStyle}>
+                <img src={ProfilPic} alt="Profile" style={ImageStyle}/>
+                <h2 style={TitleStyle}>{list.nom}</h2>
+                <p style={Paragraph}>{list.bio}</p>
+            </div>)}
+        </>
     );
 }
 // hna radi ndiro dok les prop li kayverifiw wach inputs dyalna shah wlala
