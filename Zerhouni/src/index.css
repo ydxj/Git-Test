@@ -1,0 +1,16 @@
+.button{
+    border: 0;
+    padding: 10px;
+    border-radius: 20px;
+
+
+}
+.button:hover{
+    background-color: aqua;
+
+}
+.followers{
+    display: inline;
+    margin-left: 5px;
+    
+}
